@@ -29,6 +29,18 @@
 }
 
 
+@media screen and (max-width: 500px) {
+    .rows-cols-items{
+        margin: 0 auto;
+        width: 20rem !important;
+    }
+
+    .rows-cols-items .row{
+        margin-top: 1rem;
+    }
+}
+
+
 @keyframes horizontal-shaking {
     0% { transform: translateX(0) }
     25% { transform: translateX(5px) }

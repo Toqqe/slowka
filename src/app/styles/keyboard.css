@@ -10,7 +10,7 @@
     width: 6%;
     border: 1px solid gray;
     padding: 8px 1px;
-    border-radius: 8px;
+    border-radius: 5px;
     margin: 5px;
     background-color: #808080;
     font-size: 20px;
@@ -28,4 +28,44 @@
 }
 .absent{
     background-color: #505050 !important;
+}
+
+.bi-backspace{
+    height: 20px;
+    width: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .keyboard-container{
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .keyboard-container .row{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .keyboard-container .row > div{
+        cursor: pointer;
+        width: 7%;
+        height: 3rem;
+        border: 1px solid gray;
+        padding: 8px 1px;
+        margin: 0 5px 0 0;
+        background-color: #808080;
+        font-size: 16px;
+        font-weight: bold; 
+
+    }
+
+    .bi-backspace{
+        height: 25px;
+        width: 18px;
+    }
+    .enter-keyboard{
+        padding: 5px !important;
+    }
 }
