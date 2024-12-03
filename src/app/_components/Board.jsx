@@ -44,8 +44,8 @@ const Board = () =>{
     const handleClickKeyboard = (letter) =>{
         handleInputLetter(letter)
     }
-
     const handleInputLetter = (letter) =>{
+        
         if(winner === null){
             setJiggling(false);
             const newRowsCols = [...rowsCols];
@@ -54,7 +54,7 @@ const Board = () =>{
             if(col === -1){
                 return
             }
-            row[col] = letter;
+            row[col] = letter.toLowerCase();
             setRowsCols(newRowsCols);
         }
     }
@@ -88,6 +88,7 @@ const Board = () =>{
         const result = Array(LETTERS).fill('');
         const passArray = PASS.toUpperCase().split('');
         const userWord = word.toUpperCase().split('')
+        const newGuesses = guessess;
 
         // Green
         userWord.forEach((el, ind) => {
@@ -95,30 +96,26 @@ const Board = () =>{
                 result[ind] = 'green';
                 passArray[ind] = null;
                 userWord[ind] = null;
-                setGuessess((prev) => ({
-                    ...prev,
-                    [el]: 'green'
-                }))
-            }else{
-                setGuessess((prev) => ({
-                    ...prev,
-                    [el]: 'absent'
-                }))
+                newGuesses[el] = 'green'
             }
         })
         // Yellow
         userWord.forEach((el,ind)=>{
-            if(passArray.includes(userWord[ind]) && result[ind] != 'green'){
+            if(passArray.includes(userWord[ind]) && result[ind] != 'green' && userWord[ind] !== null){
                 result[ind] = 'yellow';
                 passArray[passArray.indexOf(userWord[ind])] = null;
-                setGuessess((prev) => ({
-                    ...prev,
-                    [el] : 'yellow'
-                }))
-
+                newGuesses[el] = 'yellow'
             }
         })
+        // Absent
+        userWord.forEach((el, ind)=>{
+            if(userWord[ind] !== null && userWord[ind] !== undefined && guessess[el] === '' ){
 
+                newGuesses[el] = 'absent'
+            }
+        })
+        
+        setGuessess(newGuesses);
         setResult((prevResult) =>{
             const newResult = [...prevResult];
             newResult[currentRow] = result;
