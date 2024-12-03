@@ -1,0 +1,9 @@
+.game-modal .modal-content{
+    border-radius: 8px;
+    height: 50% !important;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+.modal-footer button{
+    width: 10rem;
+}

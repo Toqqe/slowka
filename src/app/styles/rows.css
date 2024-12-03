@@ -1,0 +1,38 @@
+.jiggling{
+    animation: horizontal-shaking 0.5s;
+}
+
+.rows-cols-items{
+    margin: 0 auto;
+    width: 25rem !important;
+}
+
+.rows-cols-items .row{
+    margin-top: 2rem;
+}
+.rows-cols-items .col{
+    margin: 2px !important;
+    padding: 3px;
+    height: 3rem;
+
+    border: 1px solid gray;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.cell-green{
+    background-color: green;
+}
+.cell-yellow{
+    background-color: rgb(161, 161, 0);
+}
+
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }

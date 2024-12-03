@@ -1,0 +1,31 @@
+.keyboard-container .row{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.keyboard-container .row > div{
+    cursor: pointer;
+    width: 6%;
+    border: 1px solid gray;
+    padding: 8px 1px;
+    border-radius: 8px;
+    margin: 5px;
+    background-color: #808080;
+    font-size: 20px;
+    font-weight: bold;   
+}
+.keyboard-container .row > div:hover{
+    background-color: #636363;
+}
+
+.correct{
+    background-color: rgb(0, 120, 0) !important;
+}
+.present{
+    background-color: rgb(156, 156, 0) !important;
+}
+.absent{
+    background-color: #505050 !important;
+}
