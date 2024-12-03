@@ -41,7 +41,7 @@ const Key = ({value, status, onClick, name}) =>{
 
     
     return(
-        <div key={value} name={name} className={classes} onClick={() => onClick(value)} status={status}>
+        <div key={value} name={name} className={classes} onClick={() => onClick(value)}>
             {value}
         </div>
     )

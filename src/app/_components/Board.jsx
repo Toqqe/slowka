@@ -183,7 +183,12 @@ const Board = () =>{
         setModalView(false);
         setRowsCols(Array(CHANCES).fill().map(()=>Array(LETTERS).fill('')));
         setResult(Array(CHANCES).fill().map(()=>Array(LETTERS).fill('')));
-        setGuessess(charStatuses);
+
+        setGuessess(
+            Object.keys(charStatuses).reduce((acc,val)=>{
+                acc[val]= '';
+                return acc
+            },{}));
         setCurrentRow(0);
         setWinner(null);
     }
