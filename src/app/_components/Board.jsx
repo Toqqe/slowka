@@ -210,7 +210,6 @@ const Board = () =>{
                 showToast={showToast}
                 setShowToast={setShowToast}
             />
-            {PASS}
             <Guess 
                 currentRow={currentRow}
                 handleInputLetter={handleInputLetter}

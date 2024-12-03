@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 const Guess = ({currentRow, handleInputLetter, handleDeleteLetter, handleEnterGuess}) =>{
     
     useEffect(()=>{
