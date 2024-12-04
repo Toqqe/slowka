@@ -7,14 +7,16 @@ import ToastContainer from 'react-bootstrap/ToastContainer';
 const AlertToast = ({message, showToast, setShowToast}) =>{
 
     useEffect(()=>{
+        console.log(message);
         if(message){
             const timer = setTimeout(()=>{
-                setShowToast(!showToast)
+                console.log(showToast)
+                setShowToast(false)
             }, 2000)
 
             return () => clearTimeout(timer)
         }
-    }, [message])
+    }, [showToast])
 
     return (
 

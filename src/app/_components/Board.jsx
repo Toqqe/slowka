@@ -94,9 +94,9 @@ const Board = () =>{
         userWord.forEach((el, ind) => {
             if(userWord[ind] === passArray[ind]){
                 result[ind] = 'green';
+                newGuesses[el] = 'green'
                 passArray[ind] = null;
                 userWord[ind] = null;
-                newGuesses[el] = 'green'
             }
         })
         // Yellow
@@ -110,7 +110,6 @@ const Board = () =>{
         // Absent
         userWord.forEach((el, ind)=>{
             if(userWord[ind] !== null && userWord[ind] !== undefined && guessess[el] === '' ){
-
                 newGuesses[el] = 'absent'
             }
         })

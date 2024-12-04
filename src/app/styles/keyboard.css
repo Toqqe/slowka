@@ -36,6 +36,12 @@
 }
 
 @media screen and (max-width: 500px) {
+    .container{
+        --bs-gutter-x: 0rem !important;
+    }
+    .keyboard-container.container-fluid{
+        --bs-gutter-x: 0rem !important;
+    }
     .keyboard-container{
         width: 100% !important;
         padding: 0 !important;
@@ -50,10 +56,10 @@
 
     .keyboard-container .row > div{
         cursor: pointer;
-        width: 7%;
+        width: 7.5%;
         height: 3rem;
         border: 1px solid gray;
-        padding: 8px 1px;
+        padding: 10px 5px;
         margin: 0 5px 0 0;
         background-color: #808080;
         font-size: 16px;
@@ -62,10 +68,10 @@
     }
 
     .bi-backspace{
-        height: 25px;
+        height: 20px;
         width: 18px;
     }
     .enter-keyboard{
-        padding: 5px !important;
+        padding: 10px 0px !important;
     }
 }
