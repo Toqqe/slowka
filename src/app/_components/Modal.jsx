@@ -6,7 +6,7 @@ import "../styles/modal.css"
 const StopGameModal = ({showModal, setShowModal, winner, attempts, pass, restartFun, userStats, resetStats}) =>{
 
     return (
-        <Modal className='game-modal' show={showModal} onHide={() => setShowModal(!showModal)}>
+        <Modal className='game-modal' show={showModal} onHide={() => setShowModal(!showModal)} >
             <Modal.Header closeButton>
                 <Modal.Title>Statystyki</Modal.Title>
             </Modal.Header>
